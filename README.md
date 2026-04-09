@@ -37,17 +37,24 @@ The alternative: let the big model write a **reusable skill** (a structured prom
 
 ## Benchmark Results / 基准测试结果
 
-Tested on 10 dynamic programming problems (Easy → Hard). Big model: Claude Opus 4.6. Small model: GPT-5-mini.
+30 dynamic programming problems across 5 difficulty tiers (Medium → Expert). Big model: Claude Opus 4.6. Small model: GPT-5-mini.
 
-在 10 道动态规划题（Easy → Hard）上测试。大模型：Claude Opus 4.6，小模型：GPT-5-mini。
+30 道动态规划题，横跨 5 个难度等级（Medium → Expert）。大模型：Claude Opus 4.6，小模型：GPT-5-mini。
 
-### Accuracy / 正确率
+### Accuracy by Tier / 分层正确率
 
-| Approach | Accuracy |
-|----------|----------|
-| Small model alone | 10/10 |
-| Small model + skill | 10/10 |
-| Big model alone | 10/10 |
+| Tier | Small alone | Small + skill | Big alone | Rescued |
+|------|-------------|---------------|-----------|---------|
+| Medium (5) | 4/5 | **5/5** | 5/5 | 1 |
+| Medium-Hard (5) | 5/5 | 5/5 | 5/5 | 0 |
+| Hard (5) | 5/5 | 5/5 | 5/5 | 0 |
+| Hard+ (5) | 5/5 | 5/5 | 5/5 | 0 |
+| Expert (10) | 10/10 | 10/10 | 10/10 | 0 |
+| **Total** | **29/30** | **30/30** | **30/30** | **1** |
+
+The skill **rescued 1 problem** (coin change) that the small model failed bare, and **degraded 0** — strictly non-negative impact.
+
+技能指南**挽救了 1 道题**（零钱兑换），小模型裸做失败但加指南后通过。**0 道退化** —— 严格非负影响。
 
 ### Token Economics / Token 经济性
 
@@ -55,27 +62,29 @@ Output tokens only (input tokens can be cached via prompt caching):
 
 只算 output token（input token 可通过 prompt caching 消除）：
 
-| Metric | Small alone | Small + skill | Big alone |
-|--------|-------------|---------------|-----------|
-| Output tokens (10 tasks) | 6,775 | 5,682 | 1,735 |
-| Reasoning tokens | 5,056 | 3,968 (-21%) | N/A |
-| Skill generation (one-time) | — | 776 | — |
+| Metric (30 tasks) | Small alone | Small + skill | Big alone |
+|--------------------|-------------|---------------|-----------|
+| Output tokens | 21,304 | 20,284 | 6,844 |
+| Reasoning tokens | 15,552 | 14,208 (-8.6%) | N/A |
+| Skill generation (one-time) | — | 940 | — |
 
 **Key findings / 关键发现:**
 
-- The skill **reduced small model reasoning by 21%** (1,088 fewer thinking tokens per 10 tasks)
-- Skill generation cost: **776 tokens** (one-time). Break-even at **~7 tasks**
-- At market pricing (big model output ~15x more expensive): **skill approach saves 33%** vs calling the big model every time
-- 技能指南让小模型的**思考量减少了 21%**（每 10 题少 1,088 个推理 token）
-- 指南生成成本：**776 token**（一次性）。**约 7 道题**回本
-- 按市场定价（大模型输出价格约为小模型 15 倍）：技能方案比每次都调大模型**省 33%**
+- Skill **reduced reasoning tokens by 8.6%** across 30 tasks (1,344 fewer thinking tokens)
+- **1 problem rescued**, 0 degraded — the skill is strictly beneficial for accuracy
+- Skill generation cost: **940 output tokens** (one-time, amortized to ~31 tokens/task over 30 tasks)
+- At market pricing (big model ~15x more expensive): skill approach uses **940 big-model tokens once** vs **6,844 big-model tokens** for direct execution = **86% cheaper** on the big-model bill
+- 技能指南让小模型 **reasoning 减少 8.6%**（30 题共少 1,344 个推理 token）
+- **挽救 1 道题，退化 0 道** —— 正确率严格提升
+- 指南生成成本：**940 output token**（一次性，摊到 30 题约 31 token/题）
+- 按市场定价（大模型约 15 倍价格）：指南方案只花 **940 大模型 token**，直接调大模型要花 **6,844** = 大模型账单**省 86%**
 
 ## Quick Start / 快速开始
 
 ### Install / 安装
 
 ```bash
-git clone https://github.com/yourname/brain-worker.git
+git clone https://github.com/lbx154/brain-worker.git
 cd brain-worker
 pip install -e .
 ```

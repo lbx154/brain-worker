@@ -1,0 +1,268 @@
+{
+  "skill_tokens": {
+    "input_tokens": 191,
+    "output_tokens": 940,
+    "reasoning_tokens": 0,
+    "calls": 1
+  },
+  "bare_tokens": {
+    "input_tokens": 1922,
+    "output_tokens": 21304,
+    "reasoning_tokens": 15552,
+    "calls": 30
+  },
+  "guided_tokens": {
+    "input_tokens": 24512,
+    "output_tokens": 20284,
+    "reasoning_tokens": 14208,
+    "calls": 30
+  },
+  "big_tokens": {
+    "input_tokens": 2481,
+    "output_tokens": 6844,
+    "reasoning_tokens": 0,
+    "calls": 30
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "爬楼梯",
+      "tier": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 2,
+      "name": "打家劫舍",
+      "tier": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 3,
+      "name": "零钱兑换",
+      "tier": "Medium",
+      "bare": false,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 4,
+      "name": "最长递增子序列",
+      "tier": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 5,
+      "name": "最长公共子序列",
+      "tier": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 6,
+      "name": "编辑距离",
+      "tier": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 7,
+      "name": "分割等和子集",
+      "tier": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 8,
+      "name": "目标和",
+      "tier": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 9,
+      "name": "最大正方形",
+      "tier": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 10,
+      "name": "不同路径II",
+      "tier": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 11,
+      "name": "戳气球",
+      "tier": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 12,
+      "name": "正则表达式匹配",
+      "tier": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 13,
+      "name": "鸡蛋掉落",
+      "tier": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 14,
+      "name": "通配符匹配",
+      "tier": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 15,
+      "name": "交错字符串",
+      "tier": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 16,
+      "name": "最长有效括号",
+      "tier": "Hard+",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 17,
+      "name": "不同的子序列",
+      "tier": "Hard+",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 18,
+      "name": "最小覆盖子串DP",
+      "tier": "Hard+",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 19,
+      "name": "回文分割II",
+      "tier": "Hard+",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 20,
+      "name": "打家劫舍III(树形DP)",
+      "tier": "Hard+",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 21,
+      "name": "俄罗斯套娃信封",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 22,
+      "name": "最大矩形",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 23,
+      "name": "K站中转最便宜航班",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 24,
+      "name": "最大子数组乘积",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 25,
+      "name": "奇怪的打印机",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 26,
+      "name": "自由之路(转盘DP)",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 27,
+      "name": "学生出勤记录II",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 28,
+      "name": "猜数字大小II",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 29,
+      "name": "矩阵中的最长递增路径",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 30,
+      "name": "最大整除子集",
+      "tier": "Expert",
+      "bare": true,
+      "guided": true,
+      "big": true
+    }
+  ]
+}
