@@ -15,6 +15,7 @@ from dataclasses import dataclass
 import httpx
 
 BASE_URL = os.environ.get("BRAIN_WORKER_BASE_URL", "http://127.0.0.1:18080")
+SMALL_MODEL = os.environ.get("BRAIN_WORKER_SMALL_MODEL", "gpt-5-mini")
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
 
 # ─── API ──────────────────────────────────────────────────────────────────────
@@ -42,13 +43,40 @@ def call_big(system, user, counter):
         counter.calls += 1
         return d["content"][0]["text"]
 
+def _parse_sse_response(text: str) -> tuple[str, dict]:
+    """从 SSE 流中解析最终 response.completed 事件的文本和 usage"""
+    output_text = ""
+    usage = {}
+    for line in text.split("\n"):
+        if line.startswith("data: "):
+            try:
+                d = json.loads(line[6:])
+                if d.get("type") == "response.output_text.done":
+                    output_text = d.get("text", "")
+                elif d.get("type") == "response.completed":
+                    usage = d.get("response", {}).get("usage", {})
+            except json.JSONDecodeError:
+                pass
+    return output_text, usage
+
 def call_small(system, user, counter):
     with httpx.Client(base_url=BASE_URL, timeout=180) as c:
         r = c.post("/v1/responses", json={
-            "model": "gpt-5-mini", "instructions": system,
+            "model": SMALL_MODEL, "instructions": system,
             "input": user, "stream": False,
         })
         r.raise_for_status()
+
+        content_type = r.headers.get("content-type", "")
+
+        # 有些模型强制返回 SSE 流（如 gpt-4.1），需要解析
+        if "text/event-stream" in content_type or r.text.startswith("event:"):
+            text, usage = _parse_sse_response(r.text)
+            counter.input_tokens += usage.get("input_tokens", 0)
+            counter.output_tokens += usage.get("output_tokens", 0)
+            counter.calls += 1
+            return text
+
         d = r.json()
         u = d.get("usage", {})
         counter.input_tokens += u.get("input_tokens", 0)

@@ -79,6 +79,46 @@ Output tokens only (input tokens can be cached via prompt caching):
 - 指南生成成本：**940 output token**（一次性，摊到 30 题约 31 token/题）
 - 按市场定价（大模型约 15 倍价格）：指南方案只花 **940 大模型 token**，直接调大模型要花 **6,844** = 大模型账单**省 86%**
 
+### Novel Tasks: Invented Rules / 自创规则任务
+
+Standard benchmarks (LeetCode, DP) are saturated in training data — all models ace them. To test skill distillation properly, we invented 5 rule systems that **don't exist in any training data**:
+
+标准 benchmark（LeetCode、DP）在训练数据中已经饱和——所有模型都能做对。为了正确测试 skill distillation，我们发明了 5 套**不存在于任何训练数据中的规则系统**：
+
+| Category | Description |
+|----------|-------------|
+| **StackLang** | Custom stack-based language with PUSH/POP/DUP/SWAP/ROT/IF |
+| **ZoneTax** | Fictional tax system with zones, brackets, family deductions |
+| **XorShift** | Invented XOR cipher with rolling key update |
+| **GridHop** | Custom board game: jump by cell value, find shortest path |
+| **MiniPack** | Invented binary serialization protocol |
+
+Results (30 problems, 5 categories × 6 each):
+
+| Category | Small alone | Small + skill | Big alone | Rescued | Degraded |
+|----------|-------------|---------------|-----------|---------|----------|
+| StackLang | 4/6 | 1/6 | 4/6 | 0 | 3 |
+| ZoneTax | 4/6 | 3/6 | 3/6 | 0 | 1 |
+| XorShift | 6/6 | 6/6 | 6/6 | 0 | 0 |
+| GridHop | 3/6 | 3/6 | 3/6 | 0 | 0 |
+| MiniPack | 6/6 | 6/6 | 6/6 | 0 | 0 |
+| **Total** | **23/30** | **19/30** | **22/30** | **0** | **4** |
+
+**Key findings / 关键发现:**
+
+- **The skill degraded accuracy** from 23/30 → 19/30 (4 problems worsened, 0 rescued)
+- The small model (GPT-5-mini, 23/30) **outperformed** the big model (Opus, 22/30) on these invented rules
+- Reasoning tokens dropped 37% (29,120 → 18,368), but at the cost of correctness — the model "thought less" because the skill misled it
+- **Root cause:** the big model itself misunderstood some rules (e.g., ROT semantics), and the skill propagated those errors to the small model
+- Skill 导致正确率**下降** 23/30 → 19/30（4 题退化，0 题挽救）
+- 小模型 (GPT-5-mini, 23/30) 在自创规则上**反超**大模型 (Opus, 22/30)
+- reasoning 下降 37%，但代价是正确率——模型"少想了"是因为 skill 误导了它
+- **根因：** 大模型自身对部分规则理解有误（如 ROT 语义），skill 把错误传播给了小模型
+
+**Lesson / 教训:** Skill distillation has a hard ceiling — **the skill can only be as good as the model that wrote it**. It works when the big model truly knows the domain but the small model doesn't. When both models struggle with novel rules, the skill becomes a vector for error propagation.
+
+Skill distillation 有硬上限——**skill 的质量不会超过写它的模型的能力**。只有在大模型真正掌握、小模型不掌握的领域才有效。当两个模型都对新规则理解不足时，skill 反而成了错误传播通道。
+
 ## Quick Start / 快速开始
 
 ### Install / 安装

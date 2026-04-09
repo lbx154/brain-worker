@@ -1,25 +1,25 @@
 {
   "skill_tokens": {
     "input_tokens": 191,
-    "output_tokens": 940,
+    "output_tokens": 1007,
     "reasoning_tokens": 0,
     "calls": 1
   },
   "bare_tokens": {
-    "input_tokens": 1922,
-    "output_tokens": 21304,
-    "reasoning_tokens": 15552,
+    "input_tokens": 1952,
+    "output_tokens": 4578,
+    "reasoning_tokens": 0,
     "calls": 30
   },
   "guided_tokens": {
-    "input_tokens": 24512,
-    "output_tokens": 20284,
-    "reasoning_tokens": 14208,
+    "input_tokens": 26342,
+    "output_tokens": 4767,
+    "reasoning_tokens": 0,
     "calls": 30
   },
   "big_tokens": {
     "input_tokens": 2481,
-    "output_tokens": 6844,
+    "output_tokens": 6835,
     "reasoning_tokens": 0,
     "calls": 30
   },
@@ -44,7 +44,7 @@
       "id": 3,
       "name": "零钱兑换",
       "tier": "Medium",
-      "bare": false,
+      "bare": true,
       "guided": true,
       "big": true
     },
@@ -220,8 +220,8 @@
       "id": 25,
       "name": "奇怪的打印机",
       "tier": "Expert",
-      "bare": true,
-      "guided": true,
+      "bare": false,
+      "guided": false,
       "big": true
     },
     {

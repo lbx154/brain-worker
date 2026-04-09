@@ -1,0 +1,269 @@
+{
+  "model": "gpt-5-mini",
+  "skill_tokens": {
+    "input_tokens": 1375,
+    "output_tokens": 3990,
+    "reasoning_tokens": 0,
+    "calls": 5
+  },
+  "bare_tokens": {
+    "input_tokens": 6228,
+    "output_tokens": 42508,
+    "reasoning_tokens": 29120,
+    "calls": 30
+  },
+  "guided_tokens": {
+    "input_tokens": 25800,
+    "output_tokens": 30119,
+    "reasoning_tokens": 18368,
+    "calls": 30
+  },
+  "big_tokens": {
+    "input_tokens": 8225,
+    "output_tokens": 11718,
+    "reasoning_tokens": 0,
+    "calls": 30
+  },
+  "results": [
+    {
+      "id": 1,
+      "cat": "StackLang",
+      "name": "基础算术",
+      "bare": true,
+      "guided": false,
+      "big": true
+    },
+    {
+      "id": 2,
+      "cat": "StackLang",
+      "name": "DUP和SWAP",
+      "bare": true,
+      "guided": false,
+      "big": true
+    },
+    {
+      "id": 3,
+      "cat": "StackLang",
+      "name": "ROT操作",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 4,
+      "cat": "StackLang",
+      "name": "IF条件",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 5,
+      "cat": "StackLang",
+      "name": "复杂程序",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 6,
+      "cat": "StackLang",
+      "name": "嵌套IF",
+      "bare": true,
+      "guided": false,
+      "big": true
+    },
+    {
+      "id": 7,
+      "cat": "ZoneTax",
+      "name": "基础免税",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 8,
+      "cat": "ZoneTax",
+      "name": "单段税率",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 9,
+      "cat": "ZoneTax",
+      "name": "多段税率",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 10,
+      "cat": "ZoneTax",
+      "name": "家庭减免",
+      "bare": true,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 11,
+      "cat": "ZoneTax",
+      "name": "区域系数",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 12,
+      "cat": "ZoneTax",
+      "name": "综合计算",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 13,
+      "cat": "XorShift",
+      "name": "基础编码",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 14,
+      "cat": "XorShift",
+      "name": "key更新验证",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 15,
+      "cat": "XorShift",
+      "name": "往返一致性",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 16,
+      "cat": "XorShift",
+      "name": "特殊字符",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 17,
+      "cat": "XorShift",
+      "name": "空串和单字符",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 18,
+      "cat": "XorShift",
+      "name": "长文本",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 19,
+      "cat": "GridHop",
+      "name": "简单可达",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 20,
+      "cat": "GridHop",
+      "name": "单步到达",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 21,
+      "cat": "GridHop",
+      "name": "3x3网格",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 22,
+      "cat": "GridHop",
+      "name": "不可达",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 23,
+      "cat": "GridHop",
+      "name": "4x4最短路",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 24,
+      "cat": "GridHop",
+      "name": "大跳跃",
+      "bare": false,
+      "guided": false,
+      "big": false
+    },
+    {
+      "id": 25,
+      "cat": "MiniPack",
+      "name": "整数打包",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 26,
+      "cat": "MiniPack",
+      "name": "字符串打包",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 27,
+      "cat": "MiniPack",
+      "name": "列表打包",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 28,
+      "cat": "MiniPack",
+      "name": "字典打包",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 29,
+      "cat": "MiniPack",
+      "name": "嵌套结构",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 30,
+      "cat": "MiniPack",
+      "name": "往返一致性",
+      "bare": true,
+      "guided": true,
+      "big": true
+    }
+  ]
+}
