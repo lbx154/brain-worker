@@ -1,0 +1,109 @@
+{
+  "guide_tokens": 941,
+  "results": [
+    {
+      "id": 1,
+      "name": "爬楼梯",
+      "difficulty": "Easy",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 2,
+      "name": "打家劫舍",
+      "difficulty": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 3,
+      "name": "零钱兑换",
+      "difficulty": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 4,
+      "name": "最长递增子序列",
+      "difficulty": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 5,
+      "name": "编辑距离",
+      "difficulty": "Medium-Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 6,
+      "name": "最长公共子序列",
+      "difficulty": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 7,
+      "name": "分割等和子集",
+      "difficulty": "Medium",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 8,
+      "name": "戳气球",
+      "difficulty": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 9,
+      "name": "正则表达式匹配",
+      "difficulty": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    },
+    {
+      "id": 10,
+      "name": "鸡蛋掉落",
+      "difficulty": "Hard",
+      "bare": true,
+      "guided": true,
+      "big": true
+    }
+  ],
+  "small_bare": {
+    "input_tokens": 630,
+    "output_tokens": 6775,
+    "reasoning_tokens": 5056,
+    "calls": 10
+  },
+  "small_guided": {
+    "input_tokens": 6820,
+    "output_tokens": 5682,
+    "reasoning_tokens": 3968,
+    "calls": 10
+  },
+  "big_direct": {
+    "input_tokens": 810,
+    "output_tokens": 1735,
+    "reasoning_tokens": 0,
+    "calls": 10
+  },
+  "guide_counter": {
+    "input_tokens": 165,
+    "output_tokens": 776,
+    "reasoning_tokens": 0,
+    "calls": 1
+  }
+}

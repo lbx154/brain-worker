@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "brain-worker"
+version = "0.1.0"
+description = "Prompt-level knowledge distillation: big models write skills, small models execute."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27"]
+
+[project.scripts]
+brain-worker = "brain_worker.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/brain_worker"]

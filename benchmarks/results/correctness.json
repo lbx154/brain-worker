@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "最长回文子串",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 15.1,
+    "api_calls": 1
+  },
+  {
+    "id": 1,
+    "name": "最长回文子串",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 4.3,
+    "api_calls": 1
+  },
+  {
+    "id": 1,
+    "name": "最长回文子串",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 55.4,
+    "api_calls": 4
+  },
+  {
+    "id": 2,
+    "name": "括号生成",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 13.6,
+    "api_calls": 1
+  },
+  {
+    "id": 2,
+    "name": "括号生成",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 3.3,
+    "api_calls": 1
+  },
+  {
+    "id": 2,
+    "name": "括号生成",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 15.6,
+    "api_calls": 3
+  },
+  {
+    "id": 3,
+    "name": "合并区间",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 14.9,
+    "api_calls": 1
+  },
+  {
+    "id": 3,
+    "name": "合并区间",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 3.4,
+    "api_calls": 1
+  },
+  {
+    "id": 3,
+    "name": "合并区间",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 24.7,
+    "api_calls": 3
+  },
+  {
+    "id": 4,
+    "name": "字符串解码",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 11.5,
+    "api_calls": 1
+  },
+  {
+    "id": 4,
+    "name": "字符串解码",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 4.1,
+    "api_calls": 1
+  },
+  {
+    "id": 4,
+    "name": "字符串解码",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 19.5,
+    "api_calls": 3
+  },
+  {
+    "id": 5,
+    "name": "LRU Cache",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 23.0,
+    "api_calls": 1
+  },
+  {
+    "id": 5,
+    "name": "LRU Cache",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 4.6,
+    "api_calls": 1
+  },
+  {
+    "id": 5,
+    "name": "LRU Cache",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 145.8,
+    "api_calls": 9
+  },
+  {
+    "id": 6,
+    "name": "每日温度（单调栈）",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 10.5,
+    "api_calls": 1
+  },
+  {
+    "id": 6,
+    "name": "每日温度（单调栈）",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 3.9,
+    "api_calls": 1
+  },
+  {
+    "id": 6,
+    "name": "每日温度（单调栈）",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 17.5,
+    "api_calls": 3
+  },
+  {
+    "id": 7,
+    "name": "二叉树序列化与反序列化",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 15.7,
+    "api_calls": 1
+  },
+  {
+    "id": 7,
+    "name": "二叉树序列化与反序列化",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 7.9,
+    "api_calls": 1
+  },
+  {
+    "id": 7,
+    "name": "二叉树序列化与反序列化",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 128.2,
+    "api_calls": 8
+  },
+  {
+    "id": 8,
+    "name": "最小路径和（动态规划）",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 10.7,
+    "api_calls": 1
+  },
+  {
+    "id": 8,
+    "name": "最小路径和（动态规划）",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 4.3,
+    "api_calls": 1
+  },
+  {
+    "id": 8,
+    "name": "最小路径和（动态规划）",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 15.2,
+    "api_calls": 3
+  },
+  {
+    "id": 9,
+    "name": "单词搜索（回溯）",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 12.7,
+    "api_calls": 1
+  },
+  {
+    "id": 9,
+    "name": "单词搜索（回溯）",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 4.8,
+    "api_calls": 1
+  },
+  {
+    "id": 9,
+    "name": "单词搜索（回溯）",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 23.1,
+    "api_calls": 3
+  },
+  {
+    "id": 10,
+    "name": "前K个高频元素",
+    "method": "small-only",
+    "passed": true,
+    "error": "",
+    "time": 8.2,
+    "api_calls": 1
+  },
+  {
+    "id": 10,
+    "name": "前K个高频元素",
+    "method": "big-only",
+    "passed": true,
+    "error": "",
+    "time": 3.9,
+    "api_calls": 1
+  },
+  {
+    "id": 10,
+    "name": "前K个高频元素",
+    "method": "brain-worker",
+    "passed": true,
+    "error": "",
+    "time": 26.7,
+    "api_calls": 3
+  }
+]
